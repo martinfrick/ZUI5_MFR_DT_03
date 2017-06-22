@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<core:View 
+		xmlns="sap.suite.ui.commons" 
+		xmlns:ui="sap.suite.ui.microchart" 
+		xmlns:core="sap.ui.core" 
+		controllerName="customtilechips.ColumnMicrochart">
+		
+     <GenericTile 
+  	 	id="kpiTile"
+	 	press="onPress" 
+	 	header="{/config/display_title_text}" 
+	 	subheader="{/config/display_subtitle_text}" 
+	 	frameType="OneByOne">
+        <tileContent>
+        	<TileContent footer="{/config/display_info_text}">
+            	<content>
+                	<ui:ColumnMicroChart id="columnMicroChart">
+						<ui:columns>
+							<ui:ColumnMicroChartData value="10" color="Good" />
+							<ui:ColumnMicroChartData value="20" color="Neutral" />
+							<ui:ColumnMicroChartData value="30" color="Warning" />
+						</ui:columns>
+					</ui:ColumnMicroChart>
+				</content>
+			</TileContent>
+		</tileContent>
+	</GenericTile>
+</core:View>
